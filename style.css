@@ -1,15 +1,90 @@
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   width: 100%;
   height: 500vh;
-  
+  margin: 0;
+  overflow: hidden;
+  background-color: rgba(205, 210, 213, 255);
 }
-marquee
-{
+
+marquee {
   height: 500vh;
+}
+
+.nyan {
+  background-color: rgb(236, 62, 149);
+  color: white;
+  border: none;
+  height: 35px;
+  width: 210px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.tomatoes {
+  background-color: white;
+  border-radius: 20px;
+  border-width: 9px;
+  color: black;
+  border-style: outset;
+  border-color: rgba(223, 35, 35, 0.829);
+  cursor: pointer;
+  font-style: oblique;
+}
+
+.tomatoes:hover {
+  background-color: olivedrab;
+}
+
+.nyan:active {
+  opacity: 0.2;
+}
+
+.tomatoes:hover {
+  opacity: 0.6;
+  transition: opacity 1.2s;
+}
+
+.nyan:hover {
+  transition: opacity 0.22s;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.navbutton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.gif-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh; /* 16:9 aspect ratio */
+}
+
+.gif-container img {
+  position: absolute;
+  width: 300px; /* Adjust the width of the GIF as needed */
+  height: 200px;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out; /* Add a smooth transition effect */
 }

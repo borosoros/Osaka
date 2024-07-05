@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Osaka Daioh</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+
+  <button class="nyan">
+    Hello Every-nyan
+  </button>
+<!-- make css possible somehow -->
+
+
+<nav>
+  <div class="flex-container">
+    <ul>
+      <li><a href="website.html" class="navbutton">Home</a></li> 
+      <li><a href="about.html" class="navbutton">About</a></li>
+      <li><a href="menu.html" class="navbutton">Menu</a></li>   
+    </ul>
+  </div>
+</nav>
+
+  <button class="tomatoes">
+    EAT YOUR TOMATOES
+  </button>
+
+  <p>
+    <a href='https://en.wikipedia.org/wiki/Sata_andagi'>Sata Andagiiiii</a>
+  </p>
+
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsoundcloud.com%2Fanteeke%2Fosaka-phonk&psig=AOvVaw1jTe2W_SzG3mEMDpqF7HNt&ust=1708453004370000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLCSqcWBuIQDFQAAAAAdAAAAABAT">
+  <img class="m-0 max-h-full max-w-full" src="https://preview.redd.it/do-you-think-azumanga-daioh-wouldve-been-better-if-osaka-v0-4vw2yoae065c1.jpg?auto=webp&amp;s=81939445c6abefb5251aad03fac7caa3592fcbf2" alt="CDN media">
+  <img src='https://steamuserimages-a.akamaihd.net/ugc/2126320844881030133/4A80E451488AAD17CB8AF744E26B385C200E5F26/?imw=637&amp;imh=358&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true' alt="Image 2">
+
+  <section>
+    <title>Osaka Daioh</title>
+    <p>Card Number :3</p> 
+    <input class='card' type='text' placeholder='Osaka NEEDS your help!'>
+    
+  </section>
+
+  <div class="gif-container">
+    <img src="https://media.tenor.com/ZQoxZGVjnQwAAAAM/chiyo-chichi.gif" alt="Animated Gif" id="movingGif">
+  </div>
+
+  <script>
+    const gif = document.getElementById("movingGif");
+
+    function moveGif() {
+      const containerWidth = window.innerWidth;
+      const containerHeight = window.innerHeight * 0.5705; // 16:9 aspect ratio
+
+      const maxX = containerWidth - gif.clientWidth;
+      const maxY = containerHeight - gif.clientHeight;
+
+      const randomX = Math.random() * maxX;
+      const randomY = Math.random() * maxY;
+
+      gif.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+
+    // Move the GIF initially and then every 5 seconds (adjust as needed)
+    moveGif();
+    setInterval(moveGif, 1000);
+  </script>
+
+
+</body>
+</html>
