@@ -5,25 +5,105 @@
 }
 
 body {
-  width: 100%;
-  height: 500vh;
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  background-color: #cdd2d4;
+  color: #131C26;
+  line-height: 1.6;
   margin: 0;
-  overflow: hidden;
-  background-color: rgba(205, 210, 213, 255);
+  padding: 0;
+  overflow-x: hidden;
 }
 
-marquee {
-  height: 500vh;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Header styling */
+header {
+  background-color: #742C36;
+  padding: 15px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+}
+
+/* Navigation styling */
+nav {
+  background-color: #3F5461;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.flex-container ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbutton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbutton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Fun buttons */
 .nyan {
   background-color: rgb(236, 62, 149);
   color: white;
   border: none;
-  height: 35px;
+  height: 40px;
   width: 210px;
   border-radius: 12px;
   cursor: pointer;
+  font-size: 1rem;
+  margin: 15px auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.nyan:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 0 15px rgba(236, 62, 149, 0.7);
+}
+
+.nyan:active {
+  opacity: 0.6;
+}
+
+.osaka-card{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tomatoes {
@@ -35,80 +115,107 @@ marquee {
   border-color: rgba(223, 35, 35, 0.829);
   cursor: pointer;
   font-style: oblique;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 15px auto;
+  display: block;
+  transition: all 0.5s ease;
 }
 
 .tomatoes:hover {
   background-color: olivedrab;
+  transform: scale(1.1) rotate(-2deg);
+  opacity: 0.8;
 }
 
-.nyan:active {
-  opacity: 0.2;
+/* Contact form styling */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.tomatoes:hover {
-  opacity: 0.6;
-  transition: opacity 1.2s;
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
 }
 
-.nyan:hover {
-  transition: opacity 0.22s;
-}
-
-.flex-container {
-  display: flex;
-  justify-content: space-around;
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
-.navbutton {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.gif-container {
-  position: absolute;
+input[type="text"],
+input[type="email"] {
   width: 100%;
-  height: 100vh; /* 16:9 aspect ratio */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button input[type="submit"],
+button input[type="reset"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* GIF container */
+.gif-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 200px;
+  z-index: 50;
+  pointer-events: none;
 }
 
 .gif-container img {
   position: absolute;
-  width: 300px; /* Adjust the width of the GIF as needed */
-  height: 200px;
-  top: 0;
-  left: 0;
-  transition: transform 0.5s ease-in-out; /* Add a smooth transition effect */
+  width: 150px;
+  height: auto;
+  transition: transform 1s ease-in-out;
 }
 
-body {
-  color: #131C26;
-  background-color: #cdd2d4;
-  font-family: "Times New Roman", Times, serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 1.25rem; /* 20px */
+/* Densetsu section */
+.densetsu0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* About section */
+.aboutp {    
+  border-style: double;
+  padding: 20px;
+  margin: 20px 0;
+  border-width: 5px;
+  border-color: #742C36;
+  border-radius: 10px;
+}
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.6);
 }
 
 .modal-content {
@@ -117,6 +224,9 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .close {
@@ -124,73 +234,11 @@ body {
   float: right;
   font-size: 28px;
   font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* Navigation */
-.navi {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.navi li {
-  margin-right: 0.625rem; /* 10px */
-}
-
-.cartfloat {
-  float: right;
-}
-
-/* Layout */
-.logo,
-.reviews,
-.products,
-.homebody,
-.aboutp,
-.abouthead {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.aboutp {    
-  border-style: double;
-}
-
-/* Links */
-a {
-  color: #742C36;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #551A8B;
-}
-
-a:hover, a:focus {
-  color: #742C36;
-  text-decoration: none;
-}
-
-/* Buttons */
-button {
-  background-color: #742C36;
-  color: #cdd2d4;
-  padding: 0.625rem 0.9375rem; /* 10px 15px */
-  border: none;
   cursor: pointer;
 }
 
-button:hover, button:focus {
-  background-color: #000080;
+.close:hover {
+  color: #000;
 }
 
 /* Burger Menu */
@@ -201,9 +249,11 @@ button:hover, button:focus {
 
 #burgermenu svg {
   cursor: pointer;
+  fill: #fff;
+  margin: 10px;
 }
 
-#burgermenu #burgermenulinks {
+#burgermenulinks {
   visibility: hidden;
   position: absolute;
   list-style-type: none;
@@ -217,75 +267,153 @@ button:hover, button:focus {
   right: 0;
 }
 
-#burgermenu:hover #burgermenulinks {
+#burgermenulinks.show {
   visibility: visible;
 }
 
-#burgermenu #burgermenulinks li {
+#burgermenulinks li {
   margin: 10px 0;
 }
 
-#burgermenu #burgermenulinks a {
-  color: #cdd2d4;
+#burgermenulinks a {
+  color: #fff;
   text-decoration: none;
   display: block;
   padding: 5px 10px;
   transition: background-color 0.3s;
 }
 
-#burgermenu #burgermenulinks a:hover {
+#burgermenulinks a:hover {
   background-color: #4a6577;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
-  #burgermenu #burgermenulinks {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    visibility: visible;
-    background-color: transparent;
-    box-shadow: none;
-    padding: 0;
-  }
-
-  #burgermenu #burgermenulinks li {
-    margin: 0 10px;
-  }
-
-  #burgermenu #burgermenulinks a {
-    padding: 5px 10px;
-  }
-
-  #burgermenu svg {
-    display: none;
-  }
+/* Card input */
+.card {
+  padding: 10px;
+  border: 3px dashed #742C36;
+  border-radius: 8px;
+  width: 300px;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  font-size: 1rem;
 }
 
+/* Links */
+a {
+  color: #742C36;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
 
-  body {
-    padding: 0.625rem; /* 10px */
-  }
+a:visited {
+  color: #551A8B;
+}
 
-  #fullmenu ul {
+a:hover, a:focus {
+  color: #45a049;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .flex-container ul {
     flex-direction: column;
-  }
-
-  #fullmenu li {
-    margin: 0.3125rem 
-  }
-
-  .clearandprocess {
-    float: right;
-    border: 10px;
-    padding: 15px;
-  }
-
-  .densetsu0 {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-
   }
+  
+  .gif-container {
+    width: 150px;
+    height: 100px;
+  }
+  
+  .gif-container img {
+    width: 100px;
+  }
+  
+  #burgermenu svg {
+    display: block;
+  }
+  
+  #burgermenulinks {
+    width: 100%;
+    left: 0;
+  }
+}
+/* Card Form Styles */
+.card-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #3F5461;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.remove-button {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.remove-button:hover {
+  background-color: #d32f2f;
+}
+
+#saved-card {
+  padding: 15px;
+  background-color: #f1f8e9;
+  border-left: 4px solid #4CAF50;
+  border-radius: 5px;
+  margin-top: 20px;
+}

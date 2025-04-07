@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>About</title>
+  <title>About Osaka Experiment</title>
   <link rel="stylesheet" href="style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Learn About Osaka Experiment</h1>
+    </header>
+    
+    <nav>
+      <div class="flex-container">
+        <ul>
+          <li><a href="index.html" class="navbutton">Home</a></li> 
+          <li><a href="about.html" class="navbutton">About</a></li>
+          <li><a href="densetsu.html" class="navbutton">Densetsu</a></li>   
+        </ul>
+      </div>
+    </nav>
 
-  <h1>Learn About Osaka Experiment</h1>
-  <p>OsakaExperiment.com was in fact produced by the CIA in attemp to make a flawless brainwashing process. Chat, this is so sad</p>
-  <h2>Contact Us</h2>
-  <form action="" method="post" id="contactusform"></form>
-<label>First Name:
-  <input type="text" name =fname>
-</label>
-<br>
-<label>Last Name:
-  <input type="text" name="lname">
-</label>
-<br>
-<label>
-  Phone:
-  <input type="text" name="phone">
-</label> 
-<br>
-  <label> Email:
-<input type="email" name="email" required>
-  </label>
-  <br>
-  <button>
-    <input type="submit" value="submit">
-  </button>
-  <br>
-  <button>
-    <input type="reset" value="clear">
-  </button>
-  <nav>
-    <div class="flex-container">
-      <ul>
-        <li><a href="Index.html" class="navbutton">Home</a></li> 
-        <li><a href="about.html" class="navbutton">About</a></li>
-        <li><a href="densetsu.html" class="navbutton">Densetsu</a></li>   
-      </ul>
+    <div class="content">
+      <div class="aboutp">
+        <p>OsakaExperiment.com was in fact produced by the CIA in attempt to make a flawless brainwashing process. This information has yet to be officially released by the White House</p>
+      </div>
+
+      <section class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="" method="post" id="contactusform">
+          <label>First Name:
+            <input type="text" name="fname">
+          </label>
+          
+          <label>Last Name:
+            <input type="text" name="lname">
+          </label>
+          
+          <label>Phone:
+            <input type="text" name="phone">
+          </label>
+          
+          <label>Email:
+            <input type="email" name="email" required>
+          </label>
+          
+          <div class="form-buttons">
+            <button>
+              <input type="submit" value="Submit">
+            </button>
+            
+            <button>
+              <input type="reset" value="Clear">
+            </button>
+          </div>
+        </form>
+      </section>
     </div>
-  </nav>
-  
+  </div>
 </body>
-  </html>
+</html>
