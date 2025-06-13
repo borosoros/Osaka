@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food & Dining - Taniti Tourism</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f9f9;
+      color: #333;
+    }
+    header, footer {
+      background-color: #028090;
+      color: white;
+      padding: 1em 0;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #05668d;
+    }
+    nav a {
+      color: white;
+      padding: 1em;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background-color: #028090;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><rect fill="%2302c39a" width="1200" height="300"/><rect fill="%23028090" x="100" y="50" width="200" height="150" rx="10"/><rect fill="%2305668d" x="400" y="80" width="180" height="120" rx="8"/><rect fill="%2300a896" x="700" y="60" width="220" height="140" rx="12"/><circle fill="%23028090" cx="1000" cy="150" r="60"/></svg>');
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+    .section {
+      padding: 3em 1.5em;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .intro-text {
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 3em;
+      padding: 1.5em;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .dining-section {
+      margin-bottom: 4em;
+    }
+    .dining-section h3 {
+      color: #028090;
+      margin-bottom: 1.5em;
+      font-size: 1.5em;
+      border-bottom: 2px solid #02c39a;
+      padding-bottom: 0.5em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+      margin-bottom: 2em;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .card h4 {
+      color: #05668d;
+      margin-bottom: 1em;
+      font-size: 1.3em;
+    }
+    .restaurant-count {
+      background: linear-gradient(135deg, #02c39a, #00a896);
+      color: white;
+      padding: 0.5em 1em;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 1em;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+    .grocery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+    .grocery-card {
+      background: white;
+      padding: 1.5em;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-left: 4px solid #02c39a;
+    }
+    .grocery-card h4 {
+      color: #028090;
+      margin-bottom: 0.8em;
+    }
+    .important-note {
+      background: linear-gradient(135deg, #028090, #05668d);
+      color: white;
+      padding: 2em;
+      border-radius: 12px;
+      margin-top: 2em;
+      text-align: center;
+    }
+    .important-note h4 {
+      margin-bottom: 1em;
+      font-size: 1.3em;
+    }
+    .highlight-box {
+      background: #e8f7f5;
+      border: 2px solid #02c39a;
+      padding: 1.5em;
+      border-radius: 8px;
+      margin: 1.5em 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Taniti Island - Food & Dining</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="booking.html">Booking</a>
+    <a href="food.html" class="active">Food/Dining</a>
+    <a href="activities.html">Activities</a>
+    <a href="faqs.html">FAQs</a>
+  </nav>
+
+  <section class="hero">
+    Dining on Taniti
+  </section>
+
+  <section class="section">
+    <div class="intro-text">
+      <p>Taniti currently has 10 restaurants offering a variety of dining experiences, from local Tanitian cuisine to international flavors. Whether you're craving fresh local fish or familiar comfort food, you'll find options to satisfy your appetite.</p>
+    </div>
+
+    <div class="dining-section">
+      <h3>Restaurant Options</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Local Tanitian Cuisine</h4>
+          <div class="restaurant-count">5 Restaurants</div>
+          <p>Experience authentic Tanitian flavors at five restaurants that serve mostly local fish and rice. These establishments offer the freshest local catch prepared in traditional Tanitian style, giving you a true taste of the island's culinary heritage.</p>
+        </div>
+
+        <div class="card">
+          <h4>American-Style Dining</h4>
+          <div class="restaurant-count">3 Restaurants</div>
+          <p>For those craving familiar flavors from home, three restaurants serve American-style meals. These establishments offer comfort food and familiar dishes for visitors who want a taste of home during their island getaway.</p>
+        </div>
+
+        <div class="card">
+          <h4>Pan-Asian Cuisine</h4>
+          <div class="restaurant-count">2 Restaurants</div>
+          <p>Enjoy diverse Asian flavors at two restaurants serving Pan-Asian cuisine. These establishments offer a variety of dishes representing different Asian culinary traditions, adding international flair to Taniti's dining scene.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dining-section">
+      <h3>Grocery & Convenience</h3>
+      <div class="grocery-grid">
+        <div class="grocery-card">
+          <h4>Supermarkets</h4>
+          <p>Two supermarkets provide full grocery shopping options for visitors staying in accommodations with kitchen facilities or those who prefer to prepare their own meals.</p>
+        </div>
+
+        <div class="grocery-card">
+          <h4>Smaller Grocery Stores</h4>
+          <p>Two smaller grocery stores offer convenient shopping for basic necessities and food items in a more intimate setting.</p>
+        </div>
+
+        <div class="grocery-card">
+          <h4>24-Hour Convenience Store</h4>
+          <p>One convenience store is open 24 hours a day for late-night needs, snacks, and emergency supplies.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h4>Local Specialties</h4>
+      <p>Don't miss the opportunity to try fresh local fish, a staple of Tanitian cuisine. The island's fishing heritage means you'll find the freshest catches prepared in traditional ways that highlight the natural flavors of the Pacific.</p>
+    </div>
+
+    <div class="important-note">
+      <h4>Holiday Dining Notice</h4>
+      <p>Taniti enjoys a large number of national holidays throughout the year, and many restaurants will be closed on holidays. We recommend checking the holiday calendar when planning your dining experiences and making reservations accordingly.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Taniti Tourism Board | Plan your perfect Pacific getaway</p>
+  </footer>
+</body>
+</html>
